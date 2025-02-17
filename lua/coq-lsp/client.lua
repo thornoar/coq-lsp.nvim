@@ -80,7 +80,7 @@ function CoqLSPNvim:open_info_panel(bufnr)
     args = { self:get_info_bufnr(bufnr) },
     -- TODO: customization
     -- See `:h nvim_parse_cmd`. Note that the "split size" is `range`.
-    mods = { keepjumps = true, keepalt = true, vertical = true, split = 'belowright' },
+    mods = { keepjumps = true, keepalt = true, vertical = false, split = 'belowright' },
   }
   vim.cmd.clearjumps()
   vim.api.nvim_set_current_win(win)
