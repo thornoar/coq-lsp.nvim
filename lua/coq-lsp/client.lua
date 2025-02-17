@@ -227,8 +227,8 @@ end
 function CoqLSPNvim:register(bufnr)
   assert(self.buffers[bufnr] == nil)
   self.buffers[bufnr] = {}
-  -- self:create_info_panel(bufnr)
-  -- self:open_info_panel(bufnr)
+  self:create_info_panel(bufnr)
+  self:open_info_panel(bufnr)
 
   vim.api.nvim_create_autocmd({ 'CursorMoved', 'CursorMovedI' }, {
     group = self.ag,
